@@ -14,7 +14,7 @@ class RecordsController {
    */
   async getRecords(req, res) {
     const payload = req.body;
-    const { limit = 10, skip = 0 } = req.query;
+    const { limit = 50, skip = 0 } = req.query;
     const startDate = new Date(payload.startDate);
     const endDate = new Date(payload.endDate);
     const aggregationPipeline = [
